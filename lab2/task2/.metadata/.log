@@ -1,4 +1,4 @@
-!SESSION 2024-01-24 18:42:21.528 -----------------------------------------------
+!SESSION 2024-01-25 15:42:52.790 -----------------------------------------------
 eclipse.buildId=4.5.2.M20160212-1500
 java.version=1.8.0_05
 java.vendor=Oracle Corporation
@@ -6,7 +6,7 @@ BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
 Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
 
-!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2024-01-24 18:42:56.092
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2024-01-25 15:43:03.857
 !MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
 !STACK 0
 com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
@@ -25,20 +25,41 @@ Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING
 	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
 	... 9 more
 
-!ENTRY org.eclipse.cdt.core 1 0 2024-01-24 18:44:52.597
-!MESSAGE Indexed 'hello_world_sw_bsp' (80 sources, 62 headers) in 3.22 sec: 1,190 declarations; 2,486 references; 110 unresolved inclusions; 6 syntax errors; 191 unresolved names (4.9%)
+!ENTRY org.eclipse.cdt.core 1 0 2024-01-25 15:51:03.531
+!MESSAGE Indexed 'hello_world_sw' (1 sources, 21 headers) in 0.445 sec: 984 declarations; 1,606 references; 3 unresolved inclusions; 0 syntax errors; 2 unresolved names (0.077%)
 
-!ENTRY org.eclipse.cdt.core 1 0 2024-01-24 18:44:56.080
-!MESSAGE Indexed 'hello_world_sw' (1 sources, 0 headers) in 0.013 sec: 1 declarations; 1 references; 1 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
-!SESSION 2024-01-24 20:38:19.344 -----------------------------------------------
+!ENTRY org.eclipse.cdt.core 1 0 2024-01-25 15:51:05.428
+!MESSAGE Indexed 'hello_world_sw_bsp' (80 sources, 150 headers) in 1.85 sec: 5,237 declarations; 8,374 references; 1 unresolved inclusions; 2 syntax errors; 9 unresolved names (0.066%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 15:54:25.956
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x21090]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 15:54:27.796
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x21090 /cygdrive/c/Users/Jay/Documents/uni/labs/lab2/task1/Golden_Top/software/hello_world_sw/hello_world_sw.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 15:58:13.333
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x21090]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 15:58:15.136
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x21090 /cygdrive/c/Users/Jay/Documents/uni/labs/lab2/task1/Golden_Top/software/hello_world_sw/hello_world_sw.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 15:58:40.109
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 15:58:40.733
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x21090]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 15:58:42.547
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x21090 /cygdrive/c/Users/Jay/Documents/uni/labs/lab2/task1/Golden_Top/software/hello_world_sw/hello_world_sw.elf]
+!SESSION 2024-01-25 16:17:41.211 -----------------------------------------------
 eclipse.buildId=4.5.2.M20160212-1500
 java.version=1.8.0_05
 java.vendor=Oracle Corporation
 BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
 Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -data file:/C:/Users/Jay/Documents/uni/labs/lab2/task2/ -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
 
-!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2024-01-24 20:38:39.901
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2024-01-25 16:17:52.471
 !MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
 !STACK 0
 com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
@@ -57,8 +78,229 @@ Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING
 	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
 	... 9 more
 
-!ENTRY com.altera.sbtgui.launch 1 0 2024-01-24 20:46:29.872
-!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x21090 --id=0x0 --timestamp=1706120188]
+!ENTRY org.eclipse.cdt.core 4 2 2024-01-25 16:22:04.253
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.cdt.core".
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.LinkedHashMap$LinkedHashIterator.nextNode(Unknown Source)
+	at java.util.LinkedHashMap$LinkedKeyIterator.next(Unknown Source)
+	at org.eclipse.cdt.internal.core.pdom.CModelListener.addLastRecentlyUsed(CModelListener.java:135)
+	at org.eclipse.cdt.internal.core.pdom.CModelListener.elementChanged(CModelListener.java:65)
+	at org.eclipse.cdt.internal.core.model.CModelManager$2.run(CModelManager.java:1163)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.cdt.internal.core.model.CModelManager.notifyListeners(CModelManager.java:1154)
+	at org.eclipse.cdt.internal.core.model.CModelManager.firePostChangeDelta(CModelManager.java:1110)
+	at org.eclipse.cdt.internal.core.model.CModelManager.fire(CModelManager.java:1075)
+	at org.eclipse.cdt.internal.core.model.CModelManager.fire(CModelManager.java:1032)
+	at org.eclipse.cdt.internal.core.model.CModelManager.resourceChanged(CModelManager.java:906)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:373)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1470)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
 
-!ENTRY com.altera.sbtgui.launch 1 0 2024-01-24 20:46:31.779
-!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x21090 --id=0x0 --timestamp=1706120188 /cygdrive/c/Users/Jay/Documents/uni/lab2/task1/Golden_Top/software/hello_world_sw/hello_world_sw.elf]
+!ENTRY org.eclipse.cdt.core 4 0 2024-01-25 16:22:04.267
+!MESSAGE Error
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.LinkedHashMap$LinkedHashIterator.nextNode(Unknown Source)
+	at java.util.LinkedHashMap$LinkedKeyIterator.next(Unknown Source)
+	at org.eclipse.cdt.internal.core.pdom.CModelListener.addLastRecentlyUsed(CModelListener.java:135)
+	at org.eclipse.cdt.internal.core.pdom.CModelListener.elementChanged(CModelListener.java:65)
+	at org.eclipse.cdt.internal.core.model.CModelManager$2.run(CModelManager.java:1163)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.cdt.internal.core.model.CModelManager.notifyListeners(CModelManager.java:1154)
+	at org.eclipse.cdt.internal.core.model.CModelManager.firePostChangeDelta(CModelManager.java:1110)
+	at org.eclipse.cdt.internal.core.model.CModelManager.fire(CModelManager.java:1075)
+	at org.eclipse.cdt.internal.core.model.CModelManager.fire(CModelManager.java:1032)
+	at org.eclipse.cdt.internal.core.model.CModelManager.resourceChanged(CModelManager.java:906)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:373)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1470)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.launch 4 104 2024-01-25 16:22:58.165
+!MESSAGE The Nios II ELF executable does not exist. Please verify that the project hello_world_sw built successfully.
+!STACK 0
+java.io.FileNotFoundException: ELF file 'hello_world_sw.elf' not found.
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.getProgramFile(Nios2HardwareLaunchDelegate.java:1232)
+	at org.eclipse.cdt.launch.AbstractCLaunchDelegate.verifyProgramFile(AbstractCLaunchDelegate.java:448)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.initialize(AbstractNios2CLaunchDelegate.java:183)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:90)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.cdt.launch 4 104 2024-01-25 16:22:58.165
+!MESSAGE ELF file 'hello_world_sw.elf' not found.
+!STACK 0
+java.io.FileNotFoundException: ELF file 'hello_world_sw.elf' not found.
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.getProgramFile(Nios2HardwareLaunchDelegate.java:1232)
+	at org.eclipse.cdt.launch.AbstractCLaunchDelegate.verifyProgramFile(AbstractCLaunchDelegate.java:448)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.initialize(AbstractNios2CLaunchDelegate.java:183)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:90)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:23:29.956
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x21090]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:23:31.772
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x21090 /cygdrive/c/Users/Jay/Documents/uni/labs/lab2/task1/Golden_Top/software/hello_world_sw/hello_world_sw.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:24:23.471
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:24:24.098
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x21090]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:24:25.921
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x21090 /cygdrive/c/Users/Jay/Documents/uni/labs/lab2/task1/Golden_Top/software/hello_world_sw/hello_world_sw.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:24:54.975
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:24:55.596
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x21090]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:24:57.422
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x21090 /cygdrive/c/Users/Jay/Documents/uni/labs/lab2/task1/Golden_Top/software/hello_world_sw/hello_world_sw.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:26:10.193
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:26:10.820
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x21090]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:26:12.652
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x21090 /cygdrive/c/Users/Jay/Documents/uni/labs/lab2/task1/Golden_Top/software/hello_world_sw/hello_world_sw.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:28:18.326
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:28:18.933
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x21090]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:28:20.756
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x21090 /cygdrive/c/Users/Jay/Documents/uni/labs/lab2/task1/Golden_Top/software/hello_world_sw/hello_world_sw.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:29:37.029
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:29:37.631
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x21090]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:29:39.456
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x21090 /cygdrive/c/Users/Jay/Documents/uni/labs/lab2/task1/Golden_Top/software/hello_world_sw/hello_world_sw.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:31:59.863
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:32:00.452
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x21090]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:32:02.269
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x21090 /cygdrive/c/Users/Jay/Documents/uni/labs/lab2/task1/Golden_Top/software/hello_world_sw/hello_world_sw.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:33:05.487
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:33:06.082
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x21090]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:33:07.900
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x21090 /cygdrive/c/Users/Jay/Documents/uni/labs/lab2/task1/Golden_Top/software/hello_world_sw/hello_world_sw.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:33:38.025
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:33:38.620
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x21090]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:33:40.447
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x21090 /cygdrive/c/Users/Jay/Documents/uni/labs/lab2/task1/Golden_Top/software/hello_world_sw/hello_world_sw.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:34:07.287
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:34:07.900
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x21090]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:34:09.717
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x21090 /cygdrive/c/Users/Jay/Documents/uni/labs/lab2/task1/Golden_Top/software/hello_world_sw/hello_world_sw.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:39:17.122
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:39:17.744
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x21090]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:39:19.570
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x21090 /cygdrive/c/Users/Jay/Documents/uni/labs/lab2/task1/Golden_Top/software/hello_world_sw/hello_world_sw.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:43:06.584
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:43:07.204
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x21090]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:43:09.028
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x21090 /cygdrive/c/Users/Jay/Documents/uni/labs/lab2/task1/Golden_Top/software/hello_world_sw/hello_world_sw.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:45:10.875
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:45:11.492
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x21090]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:45:13.316
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x21090 /cygdrive/c/Users/Jay/Documents/uni/labs/lab2/task1/Golden_Top/software/hello_world_sw/hello_world_sw.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:45:38.887
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:45:39.518
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x21090]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:45:41.337
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x21090 /cygdrive/c/Users/Jay/Documents/uni/labs/lab2/task1/Golden_Top/software/hello_world_sw/hello_world_sw.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:47:04.490
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:47:05.098
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x21090]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:47:06.909
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x21090 /cygdrive/c/Users/Jay/Documents/uni/labs/lab2/task1/Golden_Top/software/hello_world_sw/hello_world_sw.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:47:55.894
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:47:56.518
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x21090]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:47:58.341
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x21090 /cygdrive/c/Users/Jay/Documents/uni/labs/lab2/task1/Golden_Top/software/hello_world_sw/hello_world_sw.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:49:07.467
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:49:08.099
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x21090]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-01-25 16:49:09.922
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x21090 /cygdrive/c/Users/Jay/Documents/uni/labs/lab2/task1/Golden_Top/software/hello_world_sw/hello_world_sw.elf]

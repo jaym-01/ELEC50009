@@ -2,23 +2,31 @@
 #include <stdio.h>
 #include "altera_avalon_pio_regs.h"
 #include "system.h"
+#include<stdlib.h>
 
 int main()
 {
-	int switch_datain;
-	alt_putstr("Hello from Nios II!\n");
-	alt_putstr("When you press Push Button 0,1 the switching on of the LEDs is done by software\n");
-	alt_putstr("But, Switching on/off of LED 2 by SW 2 is done by hardware\n");
-	/* Event loop never exits. Read the PB, display on the LED */
+	int pb, switch_data, output = 1, prev_switch = 0;
 
+	alt_putstr("hello\n");
+	/* Event loop never exits. Read the PB, display on the LED */
 	while (1)
 	{
-		//Gets the data from the pb, recall that a 0 means the button is pressed
-		switch_datain = ~IORD_ALTERA_AVALON_PIO_DATA(BUTTON_BASE);
-		//Mask the bits so the leftmost LEDs are off (we only care about LED3-0)
-		switch_datain &= (0b0000000011);
-		//Send the data to the LED
-		IOWR_ALTERA_AVALON_PIO_DATA(LED_BASE,switch_datain);
+		// read in the switch and change the width based on it
+		switch_data = IORD_ALTERA_AVALON_PIO_DATA(SWITCH_BASE);
+		if(prev_switch != switch_data){
+			output = switch_data;
+			prev_switch = switch_data;
+		}
+
+		pb = ~IORD_ALTERA_AVALON_PIO_DATA(BUTTON_BASE);
+
+		if((pb & 0b1) == 0b1){
+			output = output >= 0b10000000000 ? switch_data: output << 1;
+			for(int i = 0; i < 100000; i++){}
+		}
+
+		IOWR_ALTERA_AVALON_PIO_DATA(LED_BASE, output);
 
 	}
 	return 0;
