@@ -6,7 +6,7 @@
 
 int main()
 {
-	int pb, switch_data, output = 1, prev_switch = 0, speed;
+	int pb, switch_data, output = 1, prev_switch = 0;
 
 	alt_putstr("hello\n");
 	/* Event loop never exits. Read the PB, display on the LED */
@@ -21,12 +21,9 @@ int main()
 
 		pb = ~IORD_ALTERA_AVALON_PIO_DATA(BUTTON_BASE);
 
-		if((pb & 0b11) != 0b0){
-			speed = pb & 0b10? 800000: 100000;
-
-			// performs circular shift
-			output = (output << 1 | output >> 9) & 0b1111111111;
-			for(int i = 0; i < speed; i++){}
+		if((pb & 0b1) == 0b1){
+			output = output >= 0b10000000000 ? switch_data: output << 1;
+			for(int i = 0; i < 100000; i++){}
 		}
 
 		IOWR_ALTERA_AVALON_PIO_DATA(LED_BASE, output);
