@@ -1,4 +1,4 @@
-20:18:36 **** Incremental Build of configuration Nios II for project nios_accelerometer ****
+09:55:09 **** Incremental Build of configuration Nios II for project nios_accelerometer ****
 make all 
 Info: Building ../nios_accelerometer_bsp/
 C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_accelerometer_bsp/
@@ -6,42 +6,36 @@ C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-dir
 Info: Compiling hello_world.c to obj/default/hello_world.o
 nios2-elf-gcc -xc -MP -MMD -c -I../nios_accelerometer_bsp//HAL/inc -I../nios_accelerometer_bsp/ -I../nios_accelerometer_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
 hello_world.c: In function 'main':
-hello_world.c:145:15: warning: passing argument 1 of 'shift' from incompatible pointer type [-Wincompatible-pointer-types]
+hello_world.c:147:15: warning: passing argument 1 of 'shift' from incompatible pointer type [-Wincompatible-pointer-types]
          shift(& prev_vals, x_read, array_size);
                ^
-hello_world.c:105:6: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+hello_world.c:106:6: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
  void shift(alt_32* prev_vals, alt_32 x_read, int n){
       ^
-hello_world.c:149:35: warning: passing argument 1 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+hello_world.c:151:35: warning: passing argument 1 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
          filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
                                    ^
-hello_world.c:92:8: note: expected 'int *' but argument is of type 'int (*)[(sizetype)array_size]'
+hello_world.c:93:8: note: expected 'int *' but argument is of type 'int (*)[(sizetype)array_size]'
  alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
         ^
-hello_world.c:149:49: warning: passing argument 2 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+hello_world.c:151:49: warning: passing argument 2 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
          filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
                                                  ^
-hello_world.c:92:8: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+hello_world.c:93:8: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
  alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
         ^
-hello_world.c:158:9: warning: implicit declaration of function 'alt_printf' [-Wimplicit-function-declaration]
-         alt_printf("%d\n", tmp);
-         ^
+hello_world.c:118:6: warning: variable 'start' set but not used [-Wunused-but-set-variable]
+  int start;
+      ^
 Info: Linking nios_accelerometer.elf
 nios2-elf-g++  -T'../nios_accelerometer_bsp//linker.x' -msys-crt0='../nios_accelerometer_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../nios_accelerometer_bsp/   -Wl,-Map=nios_accelerometer.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_accelerometer.elf obj/default/hello_world.o -lm -msys-lib=m
 nios2-elf-insert nios_accelerometer.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x21030 --timestamp 1706548141 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_accelerometer --quartus_project_dir "C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2" --jdi C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2/software/nios_accelerometer_bsp/../../DE10_LITE_Golden_Top.jdi --sopcinfo C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2/software/nios_accelerometer_bsp/../../nios_accelerometer.sopcinfo
-Info: (nios_accelerometer.elf) 50 KBytes program size (code + initialized data).
-Info:                          7040 Bytes free for stack + heap.
+Info: (nios_accelerometer.elf) 38 KBytes program size (code + initialized data).
+Info:                          19 KBytes free for stack + heap.
 Info: Creating nios_accelerometer.objdump
 nios2-elf-objdump --disassemble --syms --all-header --source nios_accelerometer.elf >nios_accelerometer.objdump
 [nios_accelerometer build complete]
-20:18:50 **** Incremental Build of configuration Nios II for project nios_accelerometer ****
-make all 
-Info: Building ../nios_accelerometer_bsp/
-C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_accelerometer_bsp/
-[BSP build complete]
-[nios_accelerometer build complete]
-20:21:31 **** Incremental Build of configuration Nios II for project nios_accelerometer ****
+09:56:14 **** Incremental Build of configuration Nios II for project nios_accelerometer ****
 make all 
 Info: Building ../nios_accelerometer_bsp/
 C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_accelerometer_bsp/
@@ -49,32 +43,669 @@ C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-dir
 Info: Compiling hello_world.c to obj/default/hello_world.o
 nios2-elf-gcc -xc -MP -MMD -c -I../nios_accelerometer_bsp//HAL/inc -I../nios_accelerometer_bsp/ -I../nios_accelerometer_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
 hello_world.c: In function 'main':
-hello_world.c:145:15: warning: passing argument 1 of 'shift' from incompatible pointer type [-Wincompatible-pointer-types]
+hello_world.c:142:5: warning: implicit declaration of function 'alt_printf' [-Wimplicit-function-declaration]
+     alt_printf("%d\n", (alt_32)start);
+     ^
+hello_world.c:147:15: warning: passing argument 1 of 'shift' from incompatible pointer type [-Wincompatible-pointer-types]
          shift(& prev_vals, x_read, array_size);
                ^
-hello_world.c:105:6: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+hello_world.c:106:6: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
  void shift(alt_32* prev_vals, alt_32 x_read, int n){
       ^
-hello_world.c:149:35: warning: passing argument 1 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+hello_world.c:151:35: warning: passing argument 1 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
          filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
                                    ^
-hello_world.c:92:8: note: expected 'int *' but argument is of type 'int (*)[(sizetype)array_size]'
+hello_world.c:93:8: note: expected 'int *' but argument is of type 'int (*)[(sizetype)array_size]'
  alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
         ^
-hello_world.c:149:49: warning: passing argument 2 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+hello_world.c:151:49: warning: passing argument 2 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
          filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
                                                  ^
-hello_world.c:92:8: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+hello_world.c:93:8: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
  alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
         ^
-hello_world.c:158:9: warning: implicit declaration of function 'alt_printf' [-Wimplicit-function-declaration]
-         alt_printf("%d\n", tmp);
+Info: Linking nios_accelerometer.elf
+nios2-elf-g++  -T'../nios_accelerometer_bsp//linker.x' -msys-crt0='../nios_accelerometer_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../nios_accelerometer_bsp/   -Wl,-Map=nios_accelerometer.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_accelerometer.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert nios_accelerometer.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x21030 --timestamp 1706548141 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_accelerometer --quartus_project_dir "C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2" --jdi C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2/software/nios_accelerometer_bsp/../../DE10_LITE_Golden_Top.jdi --sopcinfo C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2/software/nios_accelerometer_bsp/../../nios_accelerometer.sopcinfo
+Info: (nios_accelerometer.elf) 50 KBytes program size (code + initialized data).
+Info:                          7272 Bytes free for stack + heap.
+Info: Creating nios_accelerometer.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source nios_accelerometer.elf >nios_accelerometer.objdump
+[nios_accelerometer build complete]
+09:57:03 **** Incremental Build of configuration Nios II for project nios_accelerometer ****
+make all 
+Info: Building ../nios_accelerometer_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_accelerometer_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../nios_accelerometer_bsp//HAL/inc -I../nios_accelerometer_bsp/ -I../nios_accelerometer_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:142:5: warning: implicit declaration of function 'alt_printf' [-Wimplicit-function-declaration]
+     alt_printf("%x\n", (alt_32)start);
+     ^
+hello_world.c:147:15: warning: passing argument 1 of 'shift' from incompatible pointer type [-Wincompatible-pointer-types]
+         shift(& prev_vals, x_read, array_size);
+               ^
+hello_world.c:106:6: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ void shift(alt_32* prev_vals, alt_32 x_read, int n){
+      ^
+hello_world.c:151:35: warning: passing argument 1 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+         filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                   ^
+hello_world.c:93:8: note: expected 'int *' but argument is of type 'int (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+hello_world.c:151:49: warning: passing argument 2 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+         filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                                 ^
+hello_world.c:93:8: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+Info: Linking nios_accelerometer.elf
+nios2-elf-g++  -T'../nios_accelerometer_bsp//linker.x' -msys-crt0='../nios_accelerometer_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../nios_accelerometer_bsp/   -Wl,-Map=nios_accelerometer.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_accelerometer.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert nios_accelerometer.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x21030 --timestamp 1706548141 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_accelerometer --quartus_project_dir "C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2" --jdi C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2/software/nios_accelerometer_bsp/../../DE10_LITE_Golden_Top.jdi --sopcinfo C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2/software/nios_accelerometer_bsp/../../nios_accelerometer.sopcinfo
+Info: (nios_accelerometer.elf) 50 KBytes program size (code + initialized data).
+Info:                          7272 Bytes free for stack + heap.
+Info: Creating nios_accelerometer.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source nios_accelerometer.elf >nios_accelerometer.objdump
+[nios_accelerometer build complete]
+09:58:20 **** Incremental Build of configuration Nios II for project nios_accelerometer ****
+make all 
+Info: Building ../nios_accelerometer_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_accelerometer_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../nios_accelerometer_bsp//HAL/inc -I../nios_accelerometer_bsp/ -I../nios_accelerometer_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:142:5: warning: implicit declaration of function 'alt_printf' [-Wimplicit-function-declaration]
+     alt_printf("%d\n", start);
+     ^
+hello_world.c:147:15: warning: passing argument 1 of 'shift' from incompatible pointer type [-Wincompatible-pointer-types]
+         shift(& prev_vals, x_read, array_size);
+               ^
+hello_world.c:106:6: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ void shift(alt_32* prev_vals, alt_32 x_read, int n){
+      ^
+hello_world.c:151:35: warning: passing argument 1 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+         filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                   ^
+hello_world.c:93:8: note: expected 'int *' but argument is of type 'int (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+hello_world.c:151:49: warning: passing argument 2 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+         filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                                 ^
+hello_world.c:93:8: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+Info: Linking nios_accelerometer.elf
+nios2-elf-g++  -T'../nios_accelerometer_bsp//linker.x' -msys-crt0='../nios_accelerometer_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../nios_accelerometer_bsp/   -Wl,-Map=nios_accelerometer.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_accelerometer.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert nios_accelerometer.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x21030 --timestamp 1706548141 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_accelerometer --quartus_project_dir "C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2" --jdi C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2/software/nios_accelerometer_bsp/../../DE10_LITE_Golden_Top.jdi --sopcinfo C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2/software/nios_accelerometer_bsp/../../nios_accelerometer.sopcinfo
+Info: (nios_accelerometer.elf) 50 KBytes program size (code + initialized data).
+Info:                          7272 Bytes free for stack + heap.
+Info: Creating nios_accelerometer.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source nios_accelerometer.elf >nios_accelerometer.objdump
+[nios_accelerometer build complete]
+10:00:37 **** Incremental Build of configuration Nios II for project nios_accelerometer ****
+make all 
+Info: Building ../nios_accelerometer_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_accelerometer_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../nios_accelerometer_bsp//HAL/inc -I../nios_accelerometer_bsp/ -I../nios_accelerometer_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:142:5: warning: implicit declaration of function 'alt_printf' [-Wimplicit-function-declaration]
+     alt_printf("%d\n", (alt_32)start);
+     ^
+hello_world.c:147:15: warning: passing argument 1 of 'shift' from incompatible pointer type [-Wincompatible-pointer-types]
+         shift(& prev_vals, x_read, array_size);
+               ^
+hello_world.c:106:6: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ void shift(alt_32* prev_vals, alt_32 x_read, int n){
+      ^
+hello_world.c:151:35: warning: passing argument 1 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+         filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                   ^
+hello_world.c:93:8: note: expected 'int *' but argument is of type 'int (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+hello_world.c:151:49: warning: passing argument 2 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+         filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                                 ^
+hello_world.c:93:8: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+Info: Linking nios_accelerometer.elf
+nios2-elf-g++  -T'../nios_accelerometer_bsp//linker.x' -msys-crt0='../nios_accelerometer_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../nios_accelerometer_bsp/   -Wl,-Map=nios_accelerometer.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_accelerometer.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert nios_accelerometer.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x21030 --timestamp 1706548141 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_accelerometer --quartus_project_dir "C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2" --jdi C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2/software/nios_accelerometer_bsp/../../DE10_LITE_Golden_Top.jdi --sopcinfo C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2/software/nios_accelerometer_bsp/../../nios_accelerometer.sopcinfo
+Info: (nios_accelerometer.elf) 50 KBytes program size (code + initialized data).
+Info:                          7272 Bytes free for stack + heap.
+Info: Creating nios_accelerometer.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source nios_accelerometer.elf >nios_accelerometer.objdump
+[nios_accelerometer build complete]
+10:01:14 **** Incremental Build of configuration Nios II for project nios_accelerometer ****
+make all 
+Info: Building ../nios_accelerometer_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_accelerometer_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../nios_accelerometer_bsp//HAL/inc -I../nios_accelerometer_bsp/ -I../nios_accelerometer_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:141:5: warning: implicit declaration of function 'alt_printf' [-Wimplicit-function-declaration]
+     alt_printf("%x\n", (alt_32)start);
+     ^
+hello_world.c:146:15: warning: passing argument 1 of 'shift' from incompatible pointer type [-Wincompatible-pointer-types]
+         shift(& prev_vals, x_read, array_size);
+               ^
+hello_world.c:106:6: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ void shift(alt_32* prev_vals, alt_32 x_read, int n){
+      ^
+hello_world.c:150:35: warning: passing argument 1 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+         filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                   ^
+hello_world.c:93:8: note: expected 'int *' but argument is of type 'int (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+hello_world.c:150:49: warning: passing argument 2 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+         filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                                 ^
+hello_world.c:93:8: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+Info: Linking nios_accelerometer.elf
+nios2-elf-g++  -T'../nios_accelerometer_bsp//linker.x' -msys-crt0='../nios_accelerometer_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../nios_accelerometer_bsp/   -Wl,-Map=nios_accelerometer.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_accelerometer.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert nios_accelerometer.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x21030 --timestamp 1706548141 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_accelerometer --quartus_project_dir "C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2" --jdi C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2/software/nios_accelerometer_bsp/../../DE10_LITE_Golden_Top.jdi --sopcinfo C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2/software/nios_accelerometer_bsp/../../nios_accelerometer.sopcinfo
+Info: (nios_accelerometer.elf) 50 KBytes program size (code + initialized data).
+Info:                          7084 Bytes free for stack + heap.
+Info: Creating nios_accelerometer.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source nios_accelerometer.elf >nios_accelerometer.objdump
+[nios_accelerometer build complete]
+10:05:35 **** Incremental Build of configuration Nios II for project nios_accelerometer ****
+make all 
+Info: Building ../nios_accelerometer_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_accelerometer_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../nios_accelerometer_bsp//HAL/inc -I../nios_accelerometer_bsp/ -I../nios_accelerometer_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:146:15: warning: passing argument 1 of 'shift' from incompatible pointer type [-Wincompatible-pointer-types]
+         shift(& prev_vals, x_read, array_size);
+               ^
+hello_world.c:106:6: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ void shift(alt_32* prev_vals, alt_32 x_read, int n){
+      ^
+hello_world.c:150:35: warning: passing argument 1 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+         filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                   ^
+hello_world.c:93:8: note: expected 'int *' but argument is of type 'int (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+hello_world.c:150:49: warning: passing argument 2 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+         filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                                 ^
+hello_world.c:93:8: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+hello_world.c:160:9: warning: implicit declaration of function 'alt_printf' [-Wimplicit-function-declaration]
+         alt_printf("avg T: %x\n", (alt_32)(sum/n));
          ^
 Info: Linking nios_accelerometer.elf
 nios2-elf-g++  -T'../nios_accelerometer_bsp//linker.x' -msys-crt0='../nios_accelerometer_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../nios_accelerometer_bsp/   -Wl,-Map=nios_accelerometer.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_accelerometer.elf obj/default/hello_world.o -lm -msys-lib=m
 nios2-elf-insert nios_accelerometer.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x21030 --timestamp 1706548141 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_accelerometer --quartus_project_dir "C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2" --jdi C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2/software/nios_accelerometer_bsp/../../DE10_LITE_Golden_Top.jdi --sopcinfo C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2/software/nios_accelerometer_bsp/../../nios_accelerometer.sopcinfo
 Info: (nios_accelerometer.elf) 50 KBytes program size (code + initialized data).
-Info:                          7040 Bytes free for stack + heap.
+Info:                          7008 Bytes free for stack + heap.
+Info: Creating nios_accelerometer.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source nios_accelerometer.elf >nios_accelerometer.objdump
+[nios_accelerometer build complete]
+10:06:16 **** Incremental Build of configuration Nios II for project nios_accelerometer ****
+make all 
+Info: Building ../nios_accelerometer_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_accelerometer_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../nios_accelerometer_bsp//HAL/inc -I../nios_accelerometer_bsp/ -I../nios_accelerometer_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:146:15: warning: passing argument 1 of 'shift' from incompatible pointer type [-Wincompatible-pointer-types]
+         shift(& prev_vals, x_read, array_size);
+               ^
+hello_world.c:106:6: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ void shift(alt_32* prev_vals, alt_32 x_read, int n){
+      ^
+hello_world.c:150:35: warning: passing argument 1 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+         filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                   ^
+hello_world.c:93:8: note: expected 'int *' but argument is of type 'int (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+hello_world.c:150:49: warning: passing argument 2 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+         filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                                 ^
+hello_world.c:93:8: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+hello_world.c:160:9: warning: implicit declaration of function 'alt_printf' [-Wimplicit-function-declaration]
+         alt_printf("avg T: %x, %x\n", (alt_32)(start), (alt_32)(start));
+         ^
+Info: Linking nios_accelerometer.elf
+nios2-elf-g++  -T'../nios_accelerometer_bsp//linker.x' -msys-crt0='../nios_accelerometer_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../nios_accelerometer_bsp/   -Wl,-Map=nios_accelerometer.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_accelerometer.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert nios_accelerometer.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x21030 --timestamp 1706548141 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_accelerometer --quartus_project_dir "C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2" --jdi C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2/software/nios_accelerometer_bsp/../../DE10_LITE_Golden_Top.jdi --sopcinfo C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2/software/nios_accelerometer_bsp/../../nios_accelerometer.sopcinfo
+Info: (nios_accelerometer.elf) 50 KBytes program size (code + initialized data).
+Info:                          7004 Bytes free for stack + heap.
+Info: Creating nios_accelerometer.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source nios_accelerometer.elf >nios_accelerometer.objdump
+[nios_accelerometer build complete]
+10:07:42 **** Incremental Build of configuration Nios II for project nios_accelerometer ****
+make all 
+Info: Building ../nios_accelerometer_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_accelerometer_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../nios_accelerometer_bsp//HAL/inc -I../nios_accelerometer_bsp/ -I../nios_accelerometer_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:146:15: warning: passing argument 1 of 'shift' from incompatible pointer type [-Wincompatible-pointer-types]
+         shift(& prev_vals, x_read, array_size);
+               ^
+hello_world.c:106:6: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ void shift(alt_32* prev_vals, alt_32 x_read, int n){
+      ^
+hello_world.c:150:35: warning: passing argument 1 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+         filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                   ^
+hello_world.c:93:8: note: expected 'int *' but argument is of type 'int (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+hello_world.c:150:49: warning: passing argument 2 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+         filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                                 ^
+hello_world.c:93:8: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+hello_world.c:160:9: warning: implicit declaration of function 'alt_printf' [-Wimplicit-function-declaration]
+         alt_printf("avg T: %f, %f\n", (alt_32)(start), (alt_32)(start));
+         ^
+Info: Linking nios_accelerometer.elf
+nios2-elf-g++  -T'../nios_accelerometer_bsp//linker.x' -msys-crt0='../nios_accelerometer_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../nios_accelerometer_bsp/   -Wl,-Map=nios_accelerometer.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_accelerometer.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert nios_accelerometer.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x21030 --timestamp 1706548141 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_accelerometer --quartus_project_dir "C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2" --jdi C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2/software/nios_accelerometer_bsp/../../DE10_LITE_Golden_Top.jdi --sopcinfo C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2/software/nios_accelerometer_bsp/../../nios_accelerometer.sopcinfo
+Info: (nios_accelerometer.elf) 50 KBytes program size (code + initialized data).
+Info:                          7004 Bytes free for stack + heap.
+Info: Creating nios_accelerometer.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source nios_accelerometer.elf >nios_accelerometer.objdump
+[nios_accelerometer build complete]
+10:10:21 **** Incremental Build of configuration Nios II for project nios_accelerometer ****
+make all 
+Info: Building ../nios_accelerometer_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_accelerometer_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../nios_accelerometer_bsp//HAL/inc -I../nios_accelerometer_bsp/ -I../nios_accelerometer_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:146:15: warning: passing argument 1 of 'shift' from incompatible pointer type [-Wincompatible-pointer-types]
+         shift(& prev_vals, x_read, array_size);
+               ^
+hello_world.c:106:6: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ void shift(alt_32* prev_vals, alt_32 x_read, int n){
+      ^
+hello_world.c:150:35: warning: passing argument 1 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+         filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                   ^
+hello_world.c:93:8: note: expected 'int *' but argument is of type 'int (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+hello_world.c:150:49: warning: passing argument 2 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+         filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                                 ^
+hello_world.c:93:8: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+hello_world.c:160:9: warning: implicit declaration of function 'alt_printf' [-Wimplicit-function-declaration]
+         alt_printf("avg T: %x, %x\n", (alt_32)(start), (alt_32)(end));
+         ^
+Info: Linking nios_accelerometer.elf
+nios2-elf-g++  -T'../nios_accelerometer_bsp//linker.x' -msys-crt0='../nios_accelerometer_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../nios_accelerometer_bsp/   -Wl,-Map=nios_accelerometer.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_accelerometer.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert nios_accelerometer.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x21030 --timestamp 1706548141 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_accelerometer --quartus_project_dir "C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2" --jdi C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2/software/nios_accelerometer_bsp/../../DE10_LITE_Golden_Top.jdi --sopcinfo C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2/software/nios_accelerometer_bsp/../../nios_accelerometer.sopcinfo
+Info: (nios_accelerometer.elf) 50 KBytes program size (code + initialized data).
+Info:                          7004 Bytes free for stack + heap.
+Info: Creating nios_accelerometer.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source nios_accelerometer.elf >nios_accelerometer.objdump
+[nios_accelerometer build complete]
+10:11:40 **** Incremental Build of configuration Nios II for project nios_accelerometer ****
+make all 
+Info: Building ../nios_accelerometer_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_accelerometer_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../nios_accelerometer_bsp//HAL/inc -I../nios_accelerometer_bsp/ -I../nios_accelerometer_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:143:14: warning: implicit declaration of function 'clock' [-Wimplicit-function-declaration]
+      start = clock();
+              ^
+hello_world.c:146:15: warning: passing argument 1 of 'shift' from incompatible pointer type [-Wincompatible-pointer-types]
+         shift(& prev_vals, x_read, array_size);
+               ^
+hello_world.c:106:6: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ void shift(alt_32* prev_vals, alt_32 x_read, int n){
+      ^
+hello_world.c:150:35: warning: passing argument 1 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+         filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                   ^
+hello_world.c:93:8: note: expected 'int *' but argument is of type 'int (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+hello_world.c:150:49: warning: passing argument 2 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+         filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                                 ^
+hello_world.c:93:8: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+hello_world.c:160:9: warning: implicit declaration of function 'alt_printf' [-Wimplicit-function-declaration]
+         alt_printf("avg T: %x, %x\n", (alt_32)(start), (alt_32)(end));
+         ^
+hello_world.c:119:13: warning: unused variable 'sum' [-Wunused-variable]
+  int n = 1, sum = 0;
+             ^
+Info: Linking nios_accelerometer.elf
+nios2-elf-g++  -T'../nios_accelerometer_bsp//linker.x' -msys-crt0='../nios_accelerometer_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../nios_accelerometer_bsp/   -Wl,-Map=nios_accelerometer.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_accelerometer.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert nios_accelerometer.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x21030 --timestamp 1706548141 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_accelerometer --quartus_project_dir "C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2" --jdi C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2/software/nios_accelerometer_bsp/../../DE10_LITE_Golden_Top.jdi --sopcinfo C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2/software/nios_accelerometer_bsp/../../nios_accelerometer.sopcinfo
+Info: (nios_accelerometer.elf) 50 KBytes program size (code + initialized data).
+Info:                          6952 Bytes free for stack + heap.
+Info: Creating nios_accelerometer.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source nios_accelerometer.elf >nios_accelerometer.objdump
+[nios_accelerometer build complete]
+10:26:00 **** Incremental Build of configuration Nios II for project nios_accelerometer ****
+make all 
+Info: Building ../nios_accelerometer_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_accelerometer_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../nios_accelerometer_bsp//HAL/inc -I../nios_accelerometer_bsp/ -I../nios_accelerometer_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:146:15: warning: passing argument 1 of 'shift' from incompatible pointer type [-Wincompatible-pointer-types]
+         shift(& prev_vals, x_read, array_size);
+               ^
+hello_world.c:106:6: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ void shift(alt_32* prev_vals, alt_32 x_read, int n){
+      ^
+hello_world.c:150:35: warning: passing argument 1 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+         filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                   ^
+hello_world.c:93:8: note: expected 'int *' but argument is of type 'int (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+hello_world.c:150:49: warning: passing argument 2 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+         filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                                 ^
+hello_world.c:93:8: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+hello_world.c:160:9: warning: implicit declaration of function 'alt_printf' [-Wimplicit-function-declaration]
+         alt_printf("avg T: %x, %x\n", (alt_32)(start), (alt_32)(end));
+         ^
+hello_world.c:119:13: warning: unused variable 'sum' [-Wunused-variable]
+  int n = 1, sum = 0;
+             ^
+Info: Linking nios_accelerometer.elf
+nios2-elf-g++  -T'../nios_accelerometer_bsp//linker.x' -msys-crt0='../nios_accelerometer_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../nios_accelerometer_bsp/   -Wl,-Map=nios_accelerometer.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_accelerometer.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert nios_accelerometer.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x21030 --timestamp 1706548141 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_accelerometer --quartus_project_dir "C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2" --jdi C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2/software/nios_accelerometer_bsp/../../DE10_LITE_Golden_Top.jdi --sopcinfo C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2/software/nios_accelerometer_bsp/../../nios_accelerometer.sopcinfo
+Info: (nios_accelerometer.elf) 50 KBytes program size (code + initialized data).
+Info:                          6952 Bytes free for stack + heap.
+Info: Creating nios_accelerometer.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source nios_accelerometer.elf >nios_accelerometer.objdump
+[nios_accelerometer build complete]
+10:27:44 **** Incremental Build of configuration Nios II for project nios_accelerometer ****
+make all 
+Info: Building ../nios_accelerometer_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_accelerometer_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../nios_accelerometer_bsp//HAL/inc -I../nios_accelerometer_bsp/ -I../nios_accelerometer_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:146:15: warning: passing argument 1 of 'shift' from incompatible pointer type [-Wincompatible-pointer-types]
+         shift(& prev_vals, x_read, array_size);
+               ^
+hello_world.c:106:6: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ void shift(alt_32* prev_vals, alt_32 x_read, int n){
+      ^
+hello_world.c:150:35: warning: passing argument 1 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+         filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                   ^
+hello_world.c:93:8: note: expected 'int *' but argument is of type 'int (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+hello_world.c:150:49: warning: passing argument 2 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+         filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                                 ^
+hello_world.c:93:8: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+hello_world.c:160:9: warning: implicit declaration of function 'alt_printf' [-Wimplicit-function-declaration]
+         alt_printf("new avg T: %x, %x\n", (alt_32)(start), (alt_32)(end));
+         ^
+hello_world.c:119:13: warning: unused variable 'sum' [-Wunused-variable]
+  int n = 1, sum = 0;
+             ^
+Info: Linking nios_accelerometer.elf
+nios2-elf-g++  -T'../nios_accelerometer_bsp//linker.x' -msys-crt0='../nios_accelerometer_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../nios_accelerometer_bsp/   -Wl,-Map=nios_accelerometer.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_accelerometer.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert nios_accelerometer.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x21030 --timestamp 1706548141 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_accelerometer --quartus_project_dir "C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2" --jdi C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2/software/nios_accelerometer_bsp/../../DE10_LITE_Golden_Top.jdi --sopcinfo C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2/software/nios_accelerometer_bsp/../../nios_accelerometer.sopcinfo
+Info: (nios_accelerometer.elf) 50 KBytes program size (code + initialized data).
+Info:                          6948 Bytes free for stack + heap.
+Info: Creating nios_accelerometer.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source nios_accelerometer.elf >nios_accelerometer.objdump
+[nios_accelerometer build complete]
+10:29:23 **** Incremental Build of configuration Nios II for project nios_accelerometer ****
+make all 
+Info: Building ../nios_accelerometer_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_accelerometer_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../nios_accelerometer_bsp//HAL/inc -I../nios_accelerometer_bsp/ -I../nios_accelerometer_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:146:15: warning: passing argument 1 of 'shift' from incompatible pointer type [-Wincompatible-pointer-types]
+         shift(& prev_vals, x_read, array_size);
+               ^
+hello_world.c:106:6: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ void shift(alt_32* prev_vals, alt_32 x_read, int n){
+      ^
+hello_world.c:150:35: warning: passing argument 1 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+         filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                   ^
+hello_world.c:93:8: note: expected 'int *' but argument is of type 'int (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+hello_world.c:150:49: warning: passing argument 2 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+         filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                                 ^
+hello_world.c:93:8: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+hello_world.c:160:10: warning: implicit declaration of function 'alt_printf' [-Wimplicit-function-declaration]
+          alt_printf("new avg T: %x, %x\n", (alt_32)(start), (alt_32)(end));
+          ^
+hello_world.c:119:13: warning: unused variable 'sum' [-Wunused-variable]
+  int n = 1, sum = 0;
+             ^
+Info: Linking nios_accelerometer.elf
+nios2-elf-g++  -T'../nios_accelerometer_bsp//linker.x' -msys-crt0='../nios_accelerometer_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../nios_accelerometer_bsp/   -Wl,-Map=nios_accelerometer.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_accelerometer.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert nios_accelerometer.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x21030 --timestamp 1706548141 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_accelerometer --quartus_project_dir "C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2" --jdi C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2/software/nios_accelerometer_bsp/../../DE10_LITE_Golden_Top.jdi --sopcinfo C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2/software/nios_accelerometer_bsp/../../nios_accelerometer.sopcinfo
+Info: (nios_accelerometer.elf) 50 KBytes program size (code + initialized data).
+Info:                          6936 Bytes free for stack + heap.
+Info: Creating nios_accelerometer.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source nios_accelerometer.elf >nios_accelerometer.objdump
+[nios_accelerometer build complete]
+10:30:12 **** Incremental Build of configuration Nios II for project nios_accelerometer ****
+make all 
+Info: Building ../nios_accelerometer_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_accelerometer_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../nios_accelerometer_bsp//HAL/inc -I../nios_accelerometer_bsp/ -I../nios_accelerometer_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:146:15: warning: passing argument 1 of 'shift' from incompatible pointer type [-Wincompatible-pointer-types]
+         shift(& prev_vals, x_read, array_size);
+               ^
+hello_world.c:106:6: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ void shift(alt_32* prev_vals, alt_32 x_read, int n){
+      ^
+hello_world.c:150:35: warning: passing argument 1 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+         filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                   ^
+hello_world.c:93:8: note: expected 'int *' but argument is of type 'int (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+hello_world.c:150:49: warning: passing argument 2 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+         filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                                 ^
+hello_world.c:93:8: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+hello_world.c:160:10: warning: implicit declaration of function 'alt_printf' [-Wimplicit-function-declaration]
+          alt_printf("new avg T: %x, %x\n", (alt_32)(start), (alt_32)(end));
+          ^
+hello_world.c:119:13: warning: unused variable 'sum' [-Wunused-variable]
+  int n = 1, sum = 0;
+             ^
+Info: Linking nios_accelerometer.elf
+nios2-elf-g++  -T'../nios_accelerometer_bsp//linker.x' -msys-crt0='../nios_accelerometer_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../nios_accelerometer_bsp/   -Wl,-Map=nios_accelerometer.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_accelerometer.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert nios_accelerometer.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x21030 --timestamp 1706548141 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_accelerometer --quartus_project_dir "C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2" --jdi C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2/software/nios_accelerometer_bsp/../../DE10_LITE_Golden_Top.jdi --sopcinfo C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2/software/nios_accelerometer_bsp/../../nios_accelerometer.sopcinfo
+Info: (nios_accelerometer.elf) 50 KBytes program size (code + initialized data).
+Info:                          6936 Bytes free for stack + heap.
+Info: Creating nios_accelerometer.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source nios_accelerometer.elf >nios_accelerometer.objdump
+[nios_accelerometer build complete]
+10:32:01 **** Incremental Build of configuration Nios II for project nios_accelerometer ****
+make all 
+Info: Building ../nios_accelerometer_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_accelerometer_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../nios_accelerometer_bsp//HAL/inc -I../nios_accelerometer_bsp/ -I../nios_accelerometer_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:148:15: warning: passing argument 1 of 'shift' from incompatible pointer type [-Wincompatible-pointer-types]
+         shift(& prev_vals, x_read, array_size);
+               ^
+hello_world.c:108:6: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ void shift(alt_32* prev_vals, alt_32 x_read, int n){
+      ^
+hello_world.c:152:35: warning: passing argument 1 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+         filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                   ^
+hello_world.c:95:8: note: expected 'int *' but argument is of type 'int (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+hello_world.c:152:49: warning: passing argument 2 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+         filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                                 ^
+hello_world.c:95:8: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+hello_world.c:162:10: warning: implicit declaration of function 'alt_printf' [-Wimplicit-function-declaration]
+          alt_printf("new avg T: %x, %x\n", (alt_32)(start), (alt_32)(end));
+          ^
+hello_world.c:121:13: warning: unused variable 'sum' [-Wunused-variable]
+  int n = 1, sum = 0;
+             ^
+Info: Linking nios_accelerometer.elf
+nios2-elf-g++  -T'../nios_accelerometer_bsp//linker.x' -msys-crt0='../nios_accelerometer_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../nios_accelerometer_bsp/   -Wl,-Map=nios_accelerometer.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_accelerometer.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert nios_accelerometer.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x21030 --timestamp 1706548141 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_accelerometer --quartus_project_dir "C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2" --jdi C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2/software/nios_accelerometer_bsp/../../DE10_LITE_Golden_Top.jdi --sopcinfo C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2/software/nios_accelerometer_bsp/../../nios_accelerometer.sopcinfo
+Info: (nios_accelerometer.elf) 50 KBytes program size (code + initialized data).
+Info:                          6936 Bytes free for stack + heap.
+Info: Creating nios_accelerometer.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source nios_accelerometer.elf >nios_accelerometer.objdump
+[nios_accelerometer build complete]
+10:42:23 **** Incremental Build of configuration Nios II for project nios_accelerometer ****
+make all 
+Info: Building ../nios_accelerometer_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_accelerometer_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../nios_accelerometer_bsp//HAL/inc -I../nios_accelerometer_bsp/ -I../nios_accelerometer_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:151:15: warning: passing argument 1 of 'shift' from incompatible pointer type [-Wincompatible-pointer-types]
+         shift(& prev_vals, x_read, array_size);
+               ^
+hello_world.c:108:6: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ void shift(alt_32* prev_vals, alt_32 x_read, int n){
+      ^
+hello_world.c:155:35: warning: passing argument 1 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+         filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                   ^
+hello_world.c:95:8: note: expected 'int *' but argument is of type 'int (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+hello_world.c:155:49: warning: passing argument 2 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+         filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                                 ^
+hello_world.c:95:8: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+hello_world.c:164:16: warning: implicit declaration of function 'clock' [-Wimplicit-function-declaration]
+          end = clock(& test2);
+                ^
+hello_world.c:165:10: warning: implicit declaration of function 'alt_printf' [-Wimplicit-function-declaration]
+          alt_printf("new avg T: %x, %x\n", (alt_32)(test1.tms_utime), (alt_32)(test2.tms_utime));
+          ^
+hello_world.c:121:13: warning: unused variable 'sum' [-Wunused-variable]
+  int n = 1, sum = 0;
+             ^
+hello_world.c:120:17: warning: variable 'end' set but not used [-Wunused-but-set-variable]
+  clock_t start, end;
+                 ^
+hello_world.c:120:10: warning: variable 'start' set but not used [-Wunused-but-set-variable]
+  clock_t start, end;
+          ^
+Info: Linking nios_accelerometer.elf
+nios2-elf-g++  -T'../nios_accelerometer_bsp//linker.x' -msys-crt0='../nios_accelerometer_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../nios_accelerometer_bsp/   -Wl,-Map=nios_accelerometer.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_accelerometer.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert nios_accelerometer.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x21030 --timestamp 1706548141 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_accelerometer --quartus_project_dir "C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2" --jdi C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2/software/nios_accelerometer_bsp/../../DE10_LITE_Golden_Top.jdi --sopcinfo C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2/software/nios_accelerometer_bsp/../../nios_accelerometer.sopcinfo
+Info: (nios_accelerometer.elf) 50 KBytes program size (code + initialized data).
+Info:                          6916 Bytes free for stack + heap.
+Info: Creating nios_accelerometer.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source nios_accelerometer.elf >nios_accelerometer.objdump
+[nios_accelerometer build complete]
+10:43:33 **** Incremental Build of configuration Nios II for project nios_accelerometer ****
+make all 
+Info: Building ../nios_accelerometer_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_accelerometer_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../nios_accelerometer_bsp//HAL/inc -I../nios_accelerometer_bsp/ -I../nios_accelerometer_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:151:15: warning: passing argument 1 of 'shift' from incompatible pointer type [-Wincompatible-pointer-types]
+         shift(& prev_vals, x_read, array_size);
+               ^
+hello_world.c:108:6: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ void shift(alt_32* prev_vals, alt_32 x_read, int n){
+      ^
+hello_world.c:155:35: warning: passing argument 1 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+         filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                   ^
+hello_world.c:95:8: note: expected 'int *' but argument is of type 'int (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+hello_world.c:155:49: warning: passing argument 2 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+         filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                                 ^
+hello_world.c:95:8: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+hello_world.c:163:15: warning: implicit declaration of function 'clock' [-Wimplicit-function-declaration]
+         end = clock(& test2);
+               ^
+hello_world.c:164:9: warning: implicit declaration of function 'alt_printf' [-Wimplicit-function-declaration]
+         alt_printf("new avg T: %x, %x\n", (alt_32)(test1.tms_utime), (alt_32)(test2.tms_utime));
+         ^
+hello_world.c:121:13: warning: unused variable 'sum' [-Wunused-variable]
+  int n = 1, sum = 0;
+             ^
+hello_world.c:120:17: warning: variable 'end' set but not used [-Wunused-but-set-variable]
+  clock_t start, end;
+                 ^
+hello_world.c:120:10: warning: variable 'start' set but not used [-Wunused-but-set-variable]
+  clock_t start, end;
+          ^
+Info: Linking nios_accelerometer.elf
+nios2-elf-g++  -T'../nios_accelerometer_bsp//linker.x' -msys-crt0='../nios_accelerometer_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../nios_accelerometer_bsp/   -Wl,-Map=nios_accelerometer.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_accelerometer.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert nios_accelerometer.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x21030 --timestamp 1706548141 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_accelerometer --quartus_project_dir "C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2" --jdi C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2/software/nios_accelerometer_bsp/../../DE10_LITE_Golden_Top.jdi --sopcinfo C:/Users/Jay/Documents/uni/labs/lab3/task1_attempt_2/software/nios_accelerometer_bsp/../../nios_accelerometer.sopcinfo
+Info: (nios_accelerometer.elf) 50 KBytes program size (code + initialized data).
+Info:                          6928 Bytes free for stack + heap.
 Info: Creating nios_accelerometer.objdump
 nios2-elf-objdump --disassemble --syms --all-header --source nios_accelerometer.elf >nios_accelerometer.objdump
 [nios_accelerometer build complete]

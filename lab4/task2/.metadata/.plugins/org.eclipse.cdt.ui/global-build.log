@@ -1,0 +1,312 @@
+23:28:30 **** Incremental Build of configuration Nios II for project lab4_challenge ****
+make all 
+Info: Building ../lab4_challenge_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab4_challenge_bsp/
+[BSP build complete]
+Info: Compiling lab4.c to obj/default/lab4.o
+nios2-elf-gcc -xc -MP -MMD -c -I../lab4_challenge_bsp//HAL/inc -I../lab4_challenge_bsp/ -I../lab4_challenge_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lab4.o lab4.c
+lab4.c: In function 'print_text':
+lab4.c:35:5: warning: implicit declaration of function 'alt_putstr' [-Wimplicit-function-declaration]
+     alt_putstr(printMsg);
+     ^
+lab4.c: In function 'generate_text':
+lab4.c:55:19: warning: implicit declaration of function 'alt_getchar' [-Wimplicit-function-declaration]
+         newCurr = alt_getchar(); // Get the next character
+                   ^
+lab4.c: In function 'jtag_uart_isr':
+lab4.c:141:14: warning: passing argument 1 of 'print_text' makes integer from pointer without a cast [-Wint-conversion]
+   print_text("1");
+              ^
+lab4.c:31:6: note: expected 'char' but argument is of type 'char *'
+ void print_text(char text)
+      ^
+lab4.c:146:14: warning: passing argument 1 of 'print_text' makes integer from pointer without a cast [-Wint-conversion]
+   print_text("0");
+              ^
+lab4.c:31:6: note: expected 'char' but argument is of type 'char *'
+ void print_text(char text)
+      ^
+lab4.c:137:8: warning: unused variable 'msg' [-Wunused-variable]
+  char *msg;
+        ^
+lab4.c: In function 'main':
+lab4.c:213:9: warning: variable 'fixed_taps' set but not used [-Wunused-but-set-variable]
+     int fixed_taps[array_size];
+         ^
+lab4.c:211:12: warning: variable 'prev_vals' set but not used [-Wunused-but-set-variable]
+     alt_32 prev_vals[array_size];
+            ^
+lab4.c:201:20: warning: unused variable 'filtered_x' [-Wunused-variable]
+     alt_32 x_read, filtered_x;
+                    ^
+lab4.c:201:12: warning: unused variable 'x_read' [-Wunused-variable]
+     alt_32 x_read, filtered_x;
+            ^
+Info: Linking lab4_challenge.elf
+nios2-elf-g++  -T'../lab4_challenge_bsp//linker.x' -msys-crt0='../lab4_challenge_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../lab4_challenge_bsp/  -msmallc  -Wl,-Map=lab4_challenge.map   -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab4_challenge.elf obj/default/lab4.o -lm -msys-lib=m
+nios2-elf-insert lab4_challenge.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x21030 --timestamp 1706548141 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_accelerometer --quartus_project_dir "C:/Users/Jay/Documents/uni/labs/lab4/task2" --jdi C:/Users/Jay/Documents/uni/labs/lab4/task2/software/lab4_challenge_bsp/../../DE10_LITE_Golden_Top.jdi --sopcinfo C:/Users/Jay/Documents/uni/labs/lab4/task2/software/lab4_challenge_bsp/../../nios_accelerometer.sopcinfo
+Info: (lab4_challenge.elf) 12 KBytes program size (code + initialized data).
+Info:                      50 KBytes free for stack + heap.
+Info: Creating lab4_challenge.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source lab4_challenge.elf >lab4_challenge.objdump
+[lab4_challenge build complete]
+23:28:43 **** Incremental Build of configuration Nios II for project lab4_challenge ****
+make all 
+Info: Building ../lab4_challenge_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab4_challenge_bsp/
+[BSP build complete]
+[lab4_challenge build complete]
+23:28:44 **** Build of configuration Nios II for project lab4_challenge_bsp ****
+make all 
+[BSP build complete]
+23:30:56 **** Incremental Build of configuration Nios II for project lab4_challenge ****
+make all 
+Info: Building ../lab4_challenge_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab4_challenge_bsp/
+[BSP build complete]
+Info: Compiling lab4.c to obj/default/lab4.o
+nios2-elf-gcc -xc -MP -MMD -c -I../lab4_challenge_bsp//HAL/inc -I../lab4_challenge_bsp/ -I../lab4_challenge_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lab4.o lab4.c
+lab4.c: In function 'print_text':
+lab4.c:35:5: warning: implicit declaration of function 'alt_putstr' [-Wimplicit-function-declaration]
+     alt_putstr(printMsg);
+     ^
+lab4.c: In function 'generate_text':
+lab4.c:55:19: warning: implicit declaration of function 'alt_getchar' [-Wimplicit-function-declaration]
+         newCurr = alt_getchar(); // Get the next character
+                   ^
+lab4.c: In function 'jtag_uart_isr':
+lab4.c:142:14: warning: passing argument 1 of 'print_text' makes integer from pointer without a cast [-Wint-conversion]
+   print_text("1");
+              ^
+lab4.c:31:6: note: expected 'char' but argument is of type 'char *'
+ void print_text(char text)
+      ^
+lab4.c:147:14: warning: passing argument 1 of 'print_text' makes integer from pointer without a cast [-Wint-conversion]
+   print_text("0");
+              ^
+lab4.c:31:6: note: expected 'char' but argument is of type 'char *'
+ void print_text(char text)
+      ^
+lab4.c:138:8: warning: unused variable 'msg' [-Wunused-variable]
+  char *msg;
+        ^
+lab4.c: In function 'main':
+lab4.c:214:9: warning: variable 'fixed_taps' set but not used [-Wunused-but-set-variable]
+     int fixed_taps[array_size];
+         ^
+lab4.c:212:12: warning: variable 'prev_vals' set but not used [-Wunused-but-set-variable]
+     alt_32 prev_vals[array_size];
+            ^
+lab4.c:202:20: warning: unused variable 'filtered_x' [-Wunused-variable]
+     alt_32 x_read, filtered_x;
+                    ^
+lab4.c:202:12: warning: unused variable 'x_read' [-Wunused-variable]
+     alt_32 x_read, filtered_x;
+            ^
+Info: Linking lab4_challenge.elf
+nios2-elf-g++  -T'../lab4_challenge_bsp//linker.x' -msys-crt0='../lab4_challenge_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../lab4_challenge_bsp/  -msmallc  -Wl,-Map=lab4_challenge.map   -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab4_challenge.elf obj/default/lab4.o -lm -msys-lib=m
+nios2-elf-insert lab4_challenge.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x21030 --timestamp 1706548141 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_accelerometer --quartus_project_dir "C:/Users/Jay/Documents/uni/labs/lab4/task2" --jdi C:/Users/Jay/Documents/uni/labs/lab4/task2/software/lab4_challenge_bsp/../../DE10_LITE_Golden_Top.jdi --sopcinfo C:/Users/Jay/Documents/uni/labs/lab4/task2/software/lab4_challenge_bsp/../../nios_accelerometer.sopcinfo
+Info: (lab4_challenge.elf) 12 KBytes program size (code + initialized data).
+Info:                      51 KBytes free for stack + heap.
+Info: Creating lab4_challenge.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source lab4_challenge.elf >lab4_challenge.objdump
+[lab4_challenge build complete]
+23:30:59 **** Incremental Build of configuration Nios II for project lab4_challenge_bsp ****
+make all 
+[BSP build complete]
+23:32:11 **** Incremental Build of configuration Nios II for project lab4_challenge ****
+make all 
+Info: Building ../lab4_challenge_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab4_challenge_bsp/
+[BSP build complete]
+Info: Compiling lab4.c to obj/default/lab4.o
+nios2-elf-gcc -xc -MP -MMD -c -I../lab4_challenge_bsp//HAL/inc -I../lab4_challenge_bsp/ -I../lab4_challenge_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lab4.o lab4.c
+lab4.c: In function 'print_text':
+lab4.c:35:5: warning: implicit declaration of function 'alt_putstr' [-Wimplicit-function-declaration]
+     alt_putstr(printMsg);
+     ^
+lab4.c: In function 'generate_text':
+lab4.c:55:19: warning: implicit declaration of function 'alt_getchar' [-Wimplicit-function-declaration]
+         newCurr = alt_getchar(); // Get the next character
+                   ^
+lab4.c: In function 'jtag_uart_isr':
+lab4.c:142:14: warning: passing argument 1 of 'print_text' makes integer from pointer without a cast [-Wint-conversion]
+   print_text("1");
+              ^
+lab4.c:31:6: note: expected 'char' but argument is of type 'char *'
+ void print_text(char text)
+      ^
+lab4.c:147:14: warning: passing argument 1 of 'print_text' makes integer from pointer without a cast [-Wint-conversion]
+   print_text("0");
+              ^
+lab4.c:31:6: note: expected 'char' but argument is of type 'char *'
+ void print_text(char text)
+      ^
+lab4.c:138:8: warning: unused variable 'msg' [-Wunused-variable]
+  char *msg;
+        ^
+lab4.c: In function 'main':
+lab4.c:237:15: warning: passing argument 1 of 'shift' from incompatible pointer type [-Wincompatible-pointer-types]
+         shift(& prev_vals, x_read, array_size);
+               ^
+lab4.c:186:6: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ void shift(alt_32* prev_vals, alt_32 x_read, int n){
+      ^
+lab4.c:240:36: warning: passing argument 1 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+          filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                    ^
+lab4.c:173:8: note: expected 'int *' but argument is of type 'int (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+lab4.c:240:50: warning: passing argument 2 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+          filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                                  ^
+lab4.c:173:8: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+Info: Linking lab4_challenge.elf
+nios2-elf-g++  -T'../lab4_challenge_bsp//linker.x' -msys-crt0='../lab4_challenge_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../lab4_challenge_bsp/  -msmallc  -Wl,-Map=lab4_challenge.map   -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab4_challenge.elf obj/default/lab4.o -lm -msys-lib=m
+nios2-elf-insert lab4_challenge.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x21030 --timestamp 1706548141 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_accelerometer --quartus_project_dir "C:/Users/Jay/Documents/uni/labs/lab4/task2" --jdi C:/Users/Jay/Documents/uni/labs/lab4/task2/software/lab4_challenge_bsp/../../DE10_LITE_Golden_Top.jdi --sopcinfo C:/Users/Jay/Documents/uni/labs/lab4/task2/software/lab4_challenge_bsp/../../nios_accelerometer.sopcinfo
+Info: (lab4_challenge.elf) 13 KBytes program size (code + initialized data).
+Info:                      50 KBytes free for stack + heap.
+Info: Creating lab4_challenge.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source lab4_challenge.elf >lab4_challenge.objdump
+[lab4_challenge build complete]
+23:32:14 **** Incremental Build of configuration Nios II for project lab4_challenge_bsp ****
+make all 
+[BSP build complete]
+23:33:45 **** Incremental Build of configuration Nios II for project lab4_challenge ****
+make all 
+Info: Building ../lab4_challenge_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab4_challenge_bsp/
+[BSP build complete]
+Info: Compiling lab4.c to obj/default/lab4.o
+nios2-elf-gcc -xc -MP -MMD -c -I../lab4_challenge_bsp//HAL/inc -I../lab4_challenge_bsp/ -I../lab4_challenge_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lab4.o lab4.c
+lab4.c: In function 'print_text':
+lab4.c:35:5: warning: implicit declaration of function 'alt_putstr' [-Wimplicit-function-declaration]
+     alt_putstr(printMsg);
+     ^
+lab4.c: In function 'generate_text':
+lab4.c:55:19: warning: implicit declaration of function 'alt_getchar' [-Wimplicit-function-declaration]
+         newCurr = alt_getchar(); // Get the next character
+                   ^
+lab4.c: In function 'main':
+lab4.c:238:15: warning: passing argument 1 of 'shift' from incompatible pointer type [-Wincompatible-pointer-types]
+         shift(& prev_vals, x_read, array_size);
+               ^
+lab4.c:187:6: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ void shift(alt_32* prev_vals, alt_32 x_read, int n){
+      ^
+lab4.c:241:36: warning: passing argument 1 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+          filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                    ^
+lab4.c:174:8: note: expected 'int *' but argument is of type 'int (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+lab4.c:241:50: warning: passing argument 2 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+          filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                                  ^
+lab4.c:174:8: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+Info: Linking lab4_challenge.elf
+nios2-elf-g++  -T'../lab4_challenge_bsp//linker.x' -msys-crt0='../lab4_challenge_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../lab4_challenge_bsp/  -msmallc  -Wl,-Map=lab4_challenge.map   -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab4_challenge.elf obj/default/lab4.o -lm -msys-lib=m
+nios2-elf-insert lab4_challenge.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x21030 --timestamp 1706548141 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_accelerometer --quartus_project_dir "C:/Users/Jay/Documents/uni/labs/lab4/task2" --jdi C:/Users/Jay/Documents/uni/labs/lab4/task2/software/lab4_challenge_bsp/../../DE10_LITE_Golden_Top.jdi --sopcinfo C:/Users/Jay/Documents/uni/labs/lab4/task2/software/lab4_challenge_bsp/../../nios_accelerometer.sopcinfo
+Info: (lab4_challenge.elf) 13 KBytes program size (code + initialized data).
+Info:                      50 KBytes free for stack + heap.
+Info: Creating lab4_challenge.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source lab4_challenge.elf >lab4_challenge.objdump
+[lab4_challenge build complete]
+23:33:48 **** Incremental Build of configuration Nios II for project lab4_challenge_bsp ****
+make all 
+[BSP build complete]
+23:34:41 **** Incremental Build of configuration Nios II for project lab4_challenge ****
+make all 
+Info: Building ../lab4_challenge_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab4_challenge_bsp/
+[BSP build complete]
+Info: Compiling lab4.c to obj/default/lab4.o
+nios2-elf-gcc -xc -MP -MMD -c -I../lab4_challenge_bsp//HAL/inc -I../lab4_challenge_bsp/ -I../lab4_challenge_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lab4.o lab4.c
+lab4.c: In function 'print_text':
+lab4.c:35:5: warning: implicit declaration of function 'alt_putstr' [-Wimplicit-function-declaration]
+     alt_putstr(printMsg);
+     ^
+lab4.c: In function 'generate_text':
+lab4.c:55:19: warning: implicit declaration of function 'alt_getchar' [-Wimplicit-function-declaration]
+         newCurr = alt_getchar(); // Get the next character
+                   ^
+lab4.c: In function 'main':
+lab4.c:238:15: warning: passing argument 1 of 'shift' from incompatible pointer type [-Wincompatible-pointer-types]
+         shift(& prev_vals, x_read, array_size);
+               ^
+lab4.c:187:6: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ void shift(alt_32* prev_vals, alt_32 x_read, int n){
+      ^
+lab4.c:241:36: warning: passing argument 1 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+          filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                    ^
+lab4.c:174:8: note: expected 'int *' but argument is of type 'int (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+lab4.c:241:50: warning: passing argument 2 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+          filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                                  ^
+lab4.c:174:8: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+Info: Linking lab4_challenge.elf
+nios2-elf-g++  -T'../lab4_challenge_bsp//linker.x' -msys-crt0='../lab4_challenge_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../lab4_challenge_bsp/  -msmallc  -Wl,-Map=lab4_challenge.map   -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab4_challenge.elf obj/default/lab4.o -lm -msys-lib=m
+nios2-elf-insert lab4_challenge.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x21030 --timestamp 1706548141 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_accelerometer --quartus_project_dir "C:/Users/Jay/Documents/uni/labs/lab4/task2" --jdi C:/Users/Jay/Documents/uni/labs/lab4/task2/software/lab4_challenge_bsp/../../DE10_LITE_Golden_Top.jdi --sopcinfo C:/Users/Jay/Documents/uni/labs/lab4/task2/software/lab4_challenge_bsp/../../nios_accelerometer.sopcinfo
+Info: (lab4_challenge.elf) 13 KBytes program size (code + initialized data).
+Info:                      50 KBytes free for stack + heap.
+Info: Creating lab4_challenge.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source lab4_challenge.elf >lab4_challenge.objdump
+[lab4_challenge build complete]
+23:34:44 **** Incremental Build of configuration Nios II for project lab4_challenge_bsp ****
+make all 
+[BSP build complete]
+23:37:23 **** Incremental Build of configuration Nios II for project lab4_challenge ****
+make all 
+Info: Building ../lab4_challenge_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab4_challenge_bsp/
+[BSP build complete]
+Info: Compiling lab4.c to obj/default/lab4.o
+nios2-elf-gcc -xc -MP -MMD -c -I../lab4_challenge_bsp//HAL/inc -I../lab4_challenge_bsp/ -I../lab4_challenge_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lab4.o lab4.c
+lab4.c: In function 'print_text':
+lab4.c:35:5: warning: implicit declaration of function 'alt_putstr' [-Wimplicit-function-declaration]
+     alt_putstr(printMsg);
+     ^
+lab4.c: In function 'generate_text':
+lab4.c:55:19: warning: implicit declaration of function 'alt_getchar' [-Wimplicit-function-declaration]
+         newCurr = alt_getchar(); // Get the next character
+                   ^
+lab4.c: In function 'main':
+lab4.c:238:15: warning: passing argument 1 of 'shift' from incompatible pointer type [-Wincompatible-pointer-types]
+         shift(& prev_vals, x_read, array_size);
+               ^
+lab4.c:187:6: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ void shift(alt_32* prev_vals, alt_32 x_read, int n){
+      ^
+lab4.c:241:36: warning: passing argument 1 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+          filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                    ^
+lab4.c:174:8: note: expected 'int *' but argument is of type 'int (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+lab4.c:241:50: warning: passing argument 2 of 'filter_fixed' from incompatible pointer type [-Wincompatible-pointer-types]
+          filtered_x = filter_fixed(& fixed_taps, & prev_vals, array_size);
+                                                  ^
+lab4.c:174:8: note: expected 'alt_32 * {aka long int *}' but argument is of type 'alt_32 (*)[(sizetype)array_size]'
+ alt_32 filter_fixed(int* taps_fixed, alt_32* prev_vals, int n){
+        ^
+Info: Linking lab4_challenge.elf
+nios2-elf-g++  -T'../lab4_challenge_bsp//linker.x' -msys-crt0='../lab4_challenge_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../lab4_challenge_bsp/  -msmallc  -Wl,-Map=lab4_challenge.map   -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lab4_challenge.elf obj/default/lab4.o -lm -msys-lib=m
+nios2-elf-insert lab4_challenge.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x21030 --timestamp 1706548141 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_accelerometer --quartus_project_dir "C:/Users/Jay/Documents/uni/labs/lab4/task2" --jdi C:/Users/Jay/Documents/uni/labs/lab4/task2/software/lab4_challenge_bsp/../../DE10_LITE_Golden_Top.jdi --sopcinfo C:/Users/Jay/Documents/uni/labs/lab4/task2/software/lab4_challenge_bsp/../../nios_accelerometer.sopcinfo
+Info: (lab4_challenge.elf) 13 KBytes program size (code + initialized data).
+Info:                      50 KBytes free for stack + heap.
+Info: Creating lab4_challenge.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source lab4_challenge.elf >lab4_challenge.objdump
+[lab4_challenge build complete]
+23:37:25 **** Incremental Build of configuration Nios II for project lab4_challenge_bsp ****
+make all 
+[BSP build complete]
